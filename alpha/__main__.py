@@ -1,4 +1,4 @@
-import alpha.alpha
+import Alpha.Alpha
 
 if __name__ == '__main__':
-    alpha.alpha.run()
+    Alpha.Alpha.run()
