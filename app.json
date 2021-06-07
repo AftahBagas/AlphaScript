@@ -1,33 +1,58 @@
-{
-    "env": {
-        "API_ID": {"description": "Get this value from https://my.telegram.org"},
-        "API_HASH": {"description": "Get this value from https://my.telegram.org"},
-        "DATABASE_URL": {"description": "Mongodb url from https://cloud.mongodb.com/"},
-        "LOG_CHANNEL_ID": {"description": "Telegram Log Channel ID"},
-        "HU_STRING_SESSION": {
-            "description": "[USER MODE] - Get this using `bash genStr`",
-            "required": false},
-        "BOT_TOKEN": {
-            "description": "[BOT MODE] - Get this from https://t.me/botfather",
-            "required": false},
-        "OWNER_ID": {
-            "description": "[BOT MODE] - Your user_id",
-            "required": false},
-        "HEROKU_APP_NAME": {
-            "description": "given app name to the heroku app",
-            "required": false},
-        "HEROKU_API_KEY": {
-            "description": "get a Heroku API key from http://dashboard.heroku.com/account",
-            "required": false}
-    },
-    "buildpacks": [
-        {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
-        {"url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git"},
-        {"url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"},
-        {"url": "https://github.com/rking32/heroku-buildpack-google-chrome"},
-        {"url": "https://github.com/rking32/heroku-buildpack-chromedriver"},
-        {"url": "https://github.com/chrismytton/heroku-buildpack-jq.git"},
-        {"url": "https://github.com/heroku/heroku-buildpack-apt.git"},
-        {"url": "heroku/python"}
-    ]
+    {
+        "name":"Alpha",
+        "description":"Userbot Plugins",
+        "logo":"https://telegra.ph/file/73a7b69c3c7390eb24721.jpg",
+        "keywords":[
+            "Yo"
+        ],
+	"env": {
+		"API_ID": {
+			"description": "Get this value from https://my.telegram.org",
+                        "required": true
+		},
+		"API_HASH": {
+			"description": "Get this value from https://my.telegram.org",
+                        "required": true
+		},
+		"DATABASE_URL": {
+			"description": "Mongodb url from https://cloud.mongodb.com/, guide: https://del.dog/mongodb_guide",
+                        "required": true
+		},
+		"HEROKU_APP_NAME": {
+			"description": "Given app name to the Heroku App"
+		},
+		"LOG_CHANNEL_ID": {
+			"description": "[ Private Telegram Log Channel ID ], Note: Also add your Bot to LOG CHANNEL !",
+                        "required": true
+		},
+		"HEROKU_API_KEY": {
+			"description": "[Required] Get a Heroku API key from http://dashboard.heroku.com/account",
+                        "required": true
+		},
+		"HU_STRING_SESSION": {
+			"description": "Get this using 'https://repl.it/@Leorio/stringsessiongen' or `bash genStr`",
+			"required": true
+		},
+		"BOT_TOKEN": {
+			"description": "Get this from https://t.me/botfather and enable Inline Mode. (ADD YOUR BOT IN LOG CHANNEL)",
+			"required": true
+		},
+		"OWNER_ID": {
+			"description": "Your user_id(s) e.g 123456789 or mutiple ids",
+			"required": true
+		}
+	},
+	"buildpacks": [
+		{
+			"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+		},
+		{ "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git" },
+		{ "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip" },
+		{ "url": "https://github.com/AftahBagas/heroku-buildpack-google-chrome" },
+		{ "url": "https://github.com/AftahBagas/heroku-buildpack-chromedriver" },
+		{ "url": "https://github.com/chrismytton/heroku-buildpack-jq.git" },
+		{ "url": "https://github.com/justaprudev/heroku-buildpack-neofetch.git" },
+		{ "url": "https://github.com/code-pms/mediainfo_buildpack.git" },
+		{ "url": "heroku/python" }
+	]
 }
