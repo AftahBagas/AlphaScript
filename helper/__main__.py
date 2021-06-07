@@ -1,4 +1,4 @@
-import helper.helper
+import alpha.alpha
 
 if __name__ == '__main__':
-    helper.helper.run()
+    alpha.alpha.run()
